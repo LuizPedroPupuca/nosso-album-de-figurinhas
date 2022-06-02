@@ -17,10 +17,9 @@ public class Figurinha {
     @ManyToOne(optional = false)
     private Album album;
 
-    public Figurinha(Integer paginaQueSeEncontra, String descricao, Album album) {
+    public Figurinha(Integer paginaQueSeEncontra, String descricao) {
         this.paginaQueSeEncontra = paginaQueSeEncontra;
         this.descricao = descricao;
-        this.album = album;
     }
 
     /**
@@ -28,5 +27,9 @@ public class Figurinha {
      */
     @Deprecated
     public Figurinha() {
+    }
+
+    public void setAlbum(Album album) {
+        this.album = album;
     }
 }
